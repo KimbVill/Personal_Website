@@ -1,0 +1,211 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    background: #000;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 20px;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: url('galaxy-bg.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+}
+
+/* About Section */
+.about {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.about img {
+    width: 200px;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
+/* Skills Section */
+.skills {
+    padding: 50px 20px;
+    background: #1a1a1a;
+    text-align: center;
+}
+
+.skills h2 {
+    font-size: 3rem;
+}
+
+.skill-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.skill {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    width: 250px;
+}
+
+.skill h3 {
+    font-size: 1.5rem;
+}
+
+.skill p {
+    font-size: 1rem;
+}
+
+/* Gallery Section */
+.gallery {
+    padding: 50px 20px;
+    background: #111;
+    text-align: center;
+}
+
+.gallery h2 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #111;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Galaxy animation */
+@keyframes stars {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-100%); }
+}
+
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('stars1.gif') repeat;
+    animation: stars 5000s linear infinite;
+    opacity: 0.4;
+}
+
+.hobbies {
+    padding: 20px;
+    background-color: #0000; /* Optional background color */
+}
+
+.hobby-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Adjust based on screen size */
+    gap: 20px;
+}
+
+.hobby {
+    background-color: rgb(4, 4, 4);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+}
+
+.hobby-image {
+    width: 100%;
+    height: 500px; 
+    object-fit: cover; 
+    border-radius: 5px 5px 0 0;
+}
+
+.hobby h3, .hobby p {
+    text-align: center; 
+    margin: 10px 0; 
+}
+
+
+
+
+@media (max-width: 600px) {
+    .hobby-grid {
+        grid-template-columns: 1fr; /* Stack on smaller screens */
+    }
+}
