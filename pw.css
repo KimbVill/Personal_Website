@@ -1,211 +1,245 @@
-/* Global Styles */
-* {
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    background: linear-gradient(to bottom, #03071e, #370617); 
+    color: #f0f8ff; 
+    min-height: 100vh; 
+    overflow-x: hidden; 
 }
 
-body {
-    font-family: 'Arial', sans-serif;
-    color: #fff;
-    background: #000;
-    overflow-x: hidden;
+.profile-header {
+    background-color: rgba(255, 255, 255, 0.05); 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
 }
 
-/* Navbar */
-nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 10px 20px;
-    z-index: 1000;
+
+.profile-info {
+    padding: 20px;
+    text-align: left; 
+    position: relative;
+    display: flex; 
+    align-items: center; 
 }
 
-nav ul {
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #094067; 
+    margin-right: 20px; 
+    background-color: #292b2c; 
+    object-fit: cover;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); 
+    position: relative; 
+}
+
+.profile-info h1 {
+    margin-top: 0; 
+    margin-bottom: 5px;
+    font-size: 2em;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    text-align: left;
+}
+
+
+.profile-nav {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 20px; 
+}
+
+.profile-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
     justify-content: center;
-    list-style: none;
 }
 
-nav ul li {
+.profile-nav li {
     margin: 0 15px;
 }
 
-nav ul li a {
-    color: #fff;
+.profile-nav a {
+    display: block;
+    padding: 10px 15px;
     text-decoration: none;
-    font-size: 18px;
+    color: #90e0ef; 
+    font-weight: bold;
+    transition: color 0.3s ease; 
 }
 
-/* Hero Section */
-.hero {
-    height: 100vh;
-    background: url('galaxy-bg.jpg') no-repeat center center/cover;
+.profile-nav a:hover {
+    color: #caffbf; 
+}
+
+
+.main-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    position: relative;
+    width: 100%; 
+    margin: 0; 
+    min-height: calc(100vh - 370px); 
 }
 
-.hero-content {
-    background: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 10px;
+
+.main-content {
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box; 
 }
 
-.hero h1 {
-    font-size: 4rem;
+
+.intro-box {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-sizing: border-box; 
+}
+
+.intro-box h3 {
+    margin-top: 0;
     margin-bottom: 10px;
+    color: #f0f8ff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-.hero p {
-    font-size: 1.5rem;
+
+.about, .skills, .hobbies, .gallery {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-sizing: border-box; 
 }
 
-/* About Section */
-.about {
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.about img {
-    width: 200px;
-    border-radius: 50%;
-    margin-top: 20px;
+.about h2, .skills h2, .hobbies h2, .gallery h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #f0f8ff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 5px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 /* Skills Section */
-.skills {
-    padding: 50px 20px;
-    background: #1a1a1a;
-    text-align: center;
-}
-
-.skills h2 {
-    font-size: 3rem;
-}
-
 .skill-list {
     display: flex;
-    justify-content: center;
-    gap: 30px;
     flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .skill {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
+    width: 50%;
+    margin-bottom: 15px;
+    padding: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 8px;
-    width: 250px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.03); 
+    box-sizing: border-box; 
 }
 
 .skill h3 {
-    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: #badee3; 
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .skill p {
-    font-size: 1rem;
+    color: #a0c4ff;
 }
 
-/* Gallery Section */
-.gallery {
-    padding: 50px 20px;
-    background: #111;
-    text-align: center;
-}
-
-.gallery h2 {
-    font-size: 3rem;
-    margin-bottom: 30px;
-}
-
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.gallery-item img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #111;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
-
-/* Galaxy animation */
-@keyframes stars {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-100%); }
-}
-
-.hero {
-    position: relative;
-    overflow: hidden;
-}
-
-.hero:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('stars1.gif') repeat;
-    animation: stars 5000s linear infinite;
-    opacity: 0.4;
-}
-
-.hobbies {
-    padding: 20px;
-    background-color: #0000; /* Optional background color */
-}
 
 .hobby-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Adjust based on screen size */
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
 }
 
 .hobby {
-    background-color: rgb(4, 4, 4);
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
+    text-align: center;
 }
 
 .hobby-image {
     width: 100%;
-    height: 500px; 
+    height: 150px; 
     object-fit: cover; 
-    border-radius: 5px 5px 0 0;
+    border-radius: 8px;
+    margin-bottom: 5px;
+    filter: brightness(1.1);
 }
 
-.hobby h3, .hobby p {
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover; 
+    border-radius: 8px;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+}
+
+.footer {
     text-align: center; 
-    margin: 10px 0; 
-}
-
-
-
-
-@media (max-width: 600px) {
-    .hobby-grid {
-        grid-template-columns: 1fr; /* Stack on smaller screens */
-    }
-}
+  }
+  
+  .social_footer_ul {
+    display: inline-block; 
+    padding: 0; 
+    margin: 10; 
+    list-style-type: none; 
+  }
+  
+  .social_footer_ul li {
+    display: inline; 
+    margin: 0 10px; 
+  }
+  
+  .social_footer_ul li a {
+    color: #90e0ef; 
+    text-decoration: none; 
+    transition: color 0.3s ease; 
+  }
+  
+  .social_footer_ul li a:hover {
+    color: #caffbf; 
+  }
+  
